@@ -30,15 +30,14 @@
             .page-break { page-break-before: always; }
         }
         
-        /* High Contrast for Inputs */
         input, textarea {
             width: 100%;
             padding: 12px;
             border: 2px solid #94a3b8;
             border-radius: 8px;
             font-size: 1rem;
-            color: #000000 !important; /* Hitam Pekat */
-            background-color: #ffffff !important; /* Putih Bersih */
+            color: #000000 !important; 
+            background-color: #ffffff !important;
         }
         
         input:focus, textarea:focus {
@@ -57,7 +56,6 @@
             font-size: 0.95rem;
         }
 
-        /* Kotak Kesimpulan Utama - Kontras Sangat Tinggi */
         #aiStrategicSummary {
             border: 3px solid #000000 !important;
             font-weight: 700;
@@ -67,7 +65,6 @@
             font-size: 1.1rem;
         }
 
-        /* Image Display */
         .img-preview {
             width: 100%;
             aspect-ratio: 4/3;
@@ -77,7 +74,7 @@
         }
         .image-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-cols: repeat(3, 1fr);
             gap: 15px;
             margin-top: 10px;
         }
@@ -100,7 +97,7 @@
                 <div class="text-center md:text-left">
                     <h2 class="text-xl font-bold tracking-[0.2em] opacity-90">SJK(C) CHUNG SAN</h2>
                     <h1 class="text-3xl font-black uppercase tracking-tight leading-tight">LAPORAN PLC KRITIKAN VIDEO</h1>
-                    <p class="text-blue-200 text-sm mt-1 font-semibold italic">Prosedur Rasmi: Focus | Improve | Share</p>
+                    <p class="text-blue-200 text-sm mt-1 font-semibold italic">Standard Kualiti Pendidikan: PdPc Standard 4</p>
                 </div>
                 <div class="w-full md:w-5/12">
                     <div class="bg-blue-950 p-5 rounded-2xl border border-blue-700 shadow-xl">
@@ -115,7 +112,7 @@
             
             <!-- FASA 1: FOCUS -->
             <section>
-                <h2 class="section-title">FASA 1: FOCUS (Penetapan & Input Data)</h2>
+                <h2 class="section-title">FASA 1: FOCUS (Input Data PdPc)</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-blue-50/50 p-8 rounded-2xl border border-blue-100 mb-8">
                     <div class="space-y-5">
@@ -125,13 +122,13 @@
                         </div>
                         <div class="space-y-1">
                             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Panitia</label>
-                            <input type="text" id="panitiaName" placeholder="Cth: Matematik / Sains" class="font-bold">
+                            <input type="text" id="panitiaName" placeholder="Cth: Matematik / Bahasa Cina" class="font-bold">
                         </div>
                     </div>
                     <div class="space-y-5">
                         <div class="space-y-1">
                             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Tajuk / Isu Fokus Kritikan</label>
-                            <input type="text" id="pdpTitle" placeholder="Cth: Penguasaan Tajuk Pecahan" class="font-bold">
+                            <input type="text" id="pdpTitle" placeholder="Cth: Penguasaan Teknik Penyoalan" class="font-bold">
                         </div>
                         <div class="space-y-1">
                             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Tarikh Rakaman / Video</label>
@@ -141,23 +138,23 @@
                 </div>
 
                 <div class="space-y-5">
-                    <h3 class="font-black text-slate-800 text-sm uppercase">Dapatan Kekuatan & Penambahbaikan</h3>
+                    <h3 class="font-black text-slate-800 text-sm uppercase tracking-tight">Dapatan Kekuatan & Penambahbaikan</h3>
                     <div class="overflow-hidden border border-slate-200 rounded-2xl shadow-sm">
                         <table class="w-full text-xs" id="teacherTable">
                             <thead>
                                 <tr class="bg-slate-800 text-white">
                                     <th class="p-4 w-12 border-r border-slate-700 uppercase">Bil</th>
                                     <th class="p-4 w-56 text-left border-r border-slate-700 uppercase">Nama Guru</th>
-                                    <th class="p-4 text-left border-r border-slate-700 uppercase">Kekuatan</th>
-                                    <th class="p-4 text-left uppercase">Penambahbaikan</th>
+                                    <th class="p-4 text-left border-r border-slate-700 uppercase tracking-widest">Kekuatan</th>
+                                    <th class="p-4 text-left uppercase tracking-widest">Penambahbaikan</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-200">
                                 <tr class="bg-white">
                                     <td class="p-4 text-center border-r font-black text-slate-400">1</td>
                                     <td class="p-4 border-r"><input type="text" class="t-name !border-none font-bold uppercase p-0 focus:ring-0 bg-white text-black"></td>
-                                    <td class="p-4 border-r"><textarea class="t-strength !border-none p-0 focus:ring-0 bg-white text-black" rows="3"></textarea></td>
-                                    <td class="p-4"><textarea class="t-improve !border-none p-0 focus:ring-0 italic text-blue-800 bg-white" rows="3"></textarea></td>
+                                    <td class="p-4 border-r"><textarea class="t-strength !border-none p-0 focus:ring-0 bg-white text-black" rows="3" placeholder="Nyatakan kekuatan amalan PdPc..."></textarea></td>
+                                    <td class="p-4"><textarea class="t-improve !border-none p-0 focus:ring-0 italic text-blue-800 bg-white" rows="3" placeholder="Nyatakan ruang penambahbaikan..."></textarea></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -169,10 +166,10 @@
                 </div>
             </section>
 
-            <!-- FASA 2: IMPROVE -->
+            <!-- FASA 2: IMPROVE (8 ASPEK STANDARD 4) -->
             <section id="fasaImprove">
                 <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-                    <h2 class="section-title mb-0">FASA 2: IMPROVE (Analisis Berfokus)</h2>
+                    <h2 class="section-title mb-0">FASA 2: IMPROVE (Analisis Standard 4 PdPc)</h2>
                     <button id="generateAI" class="no-print bg-blue-700 hover:bg-blue-800 text-white px-10 py-4 rounded-2xl font-black transition-all shadow-xl transform hover:scale-105 flex items-center uppercase tracking-tighter">
                         <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         Jana Rumusan Kesimpulan
@@ -183,76 +180,67 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-10">
                     <div class="space-y-4 text-black">
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">1. Objektif & Rumusan</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">1. Guru sebagai Perancang (4.1)</label>
                             <textarea id="crit-1" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">2. Teknik Penyampaian</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">2. Guru sebagai Pengawal (4.2)</label>
                             <textarea id="crit-2" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">3. Penggunaan Bahasa</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">3. Guru sebagai Pembimbing (4.3)</label>
                             <textarea id="crit-3" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">4. Strategi PdP</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">4. Guru sebagai Pendorong (4.4)</label>
                             <textarea id="crit-4" class="critique-input text-sm font-bold" rows="2"></textarea>
-                        </div>
-                        <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">5. Kesesuaian Isi</label>
-                            <textarea id="crit-5" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="space-y-4 text-black">
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">6. Pengurusan Masa</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">5. Guru sebagai Penilai (4.5)</label>
+                            <textarea id="crit-5" class="critique-input text-sm font-bold" rows="2"></textarea>
+                        </div>
+                        <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">6. Murid sebagai Pembelajar Aktif (4.6)</label>
                             <textarea id="crit-6" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">7. Alat Audiovisual</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">7. Penggunaan Sumber & ABM</label>
                             <textarea id="crit-7" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                         <div class="p-5 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">8. Kaedah Menyoal</label>
+                            <label class="block text-[10px] font-black text-blue-900 uppercase mb-2 tracking-widest">8. Pengurusan Masa & Kelas</label>
                             <textarea id="crit-8" class="critique-input text-sm font-bold" rows="2"></textarea>
-                        </div>
-                        <div class="p-5 bg-emerald-50 border-2 border-emerald-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-emerald-900 uppercase mb-2 tracking-widest">9. Aspek Inovatif (Novel)</label>
-                            <textarea id="crit-9" class="critique-input text-sm font-bold" rows="2"></textarea>
-                        </div>
-                        <div class="p-5 bg-orange-50 border-2 border-orange-100 rounded-2xl shadow-sm">
-                            <label class="block text-[10px] font-black text-orange-900 uppercase mb-2 tracking-widest">10. Penambahbaikan Khusus</label>
-                            <textarea id="crit-10" class="critique-input text-sm font-bold" rows="2"></textarea>
                         </div>
                     </div>
                 </div>
 
-                <!-- HASIL KESIMPULAN (Kontras Tinggi & Boleh Diedit) -->
                 <div class="p-10 bg-white border-4 border-blue-800 rounded-3xl shadow-2xl">
                     <h3 class="font-black text-base uppercase tracking-tighter text-blue-900 mb-6 flex items-center">
                         <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
                         Kesimpulan Cadangan Penyelesaian Terbaik
                     </h3>
-                    <textarea id="aiStrategicSummary" class="text-lg leading-relaxed p-6 min-h-[300px] focus:ring-8 focus:ring-blue-100 !bg-white !text-black font-bold border-4 border-slate-300" placeholder="Hasil rumusan berdasarkan input Fasa 1 & 2 akan dipaparkan di sini. Anda boleh mengedit ayat secara bebas..."></textarea>
+                    <textarea id="aiStrategicSummary" class="text-lg leading-relaxed p-6 min-h-[300px] focus:ring-8 focus:ring-blue-100 !bg-white !text-black font-bold border-4 border-slate-300" placeholder="Hasil rumusan berdasarkan Standard 4 PdPc akan dipaparkan di sini..."></textarea>
                 </div>
             </section>
 
             <!-- FASA 3: SHARE -->
             <section>
-                <h2 class="section-title">FASA 3: SHARE (Perkongsian Amalan)</h2>
+                <h2 class="section-title">FASA 3: SHARE (Penyebaran Amalan Terbaik)</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black">
                     <div class="p-8 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
                         <label class="block text-[10px] font-black text-slate-800 mb-4 uppercase tracking-widest">Amalan Terbaik Disebar Luas</label>
-                        <textarea id="bestPractice" rows="4" placeholder="Nyatakan amalan terbaik..."></textarea>
+                        <textarea id="bestPractice" rows="4" placeholder="Nyatakan teknik PdPc yang paling berkesan..."></textarea>
                     </div>
                     <div class="p-8 bg-white border-2 border-slate-100 rounded-2xl shadow-sm">
                         <label class="block text-[10px] font-black text-slate-800 mb-4 uppercase tracking-widest">Medium Perkongsian</label>
-                        <textarea id="shareMedium" rows="4" placeholder="Cth: WhatsApp Panitia, Fail Digital Sekolah..."></textarea>
+                        <textarea id="shareMedium" rows="4" placeholder="Cth: WhatsApp Panitia, Google Drive, PLC Seterusnya..."></textarea>
                     </div>
                 </div>
             </section>
 
-            <!-- FASA 4: LAMPIRAN GAMBAR (Max 6) -->
+            <!-- FASA 4: LAMPIRAN GAMBAR -->
             <section class="page-break">
                 <h2 class="section-title">LAMPIRAN GAMBAR AKTIVITI</h2>
                 <div class="space-y-12">
@@ -288,13 +276,15 @@
                 <div class="space-y-6">
                     <p class="text-[11px] font-black text-slate-400 uppercase italic">Disediakan oleh:</p>
                     <div class="pt-10">
-                        <input type="text" placeholder="Nama" class="border-none font-black text-base p-0 uppercase focus:ring-0 w-full bg-transparent border-b-2 border-slate-300 !text-black">
+                        <input type="text" placeholder="Masukkan Nama" class="border-none font-black text-base p-0 uppercase focus:ring-0 w-full bg-transparent border-b-2 border-slate-300 !text-black">
+                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-2">Setiausaha Panitia / Pencatat</p>
                     </div>
                 </div>
                 <div class="space-y-6 text-right">
                     <p class="text-[11px] font-black text-slate-400 uppercase italic">Disahkan oleh:</p>
                     <div class="pt-10">
-                        <input type="text" placeholder="Nama" class="border-none text-right font-black text-base p-0 uppercase focus:ring-0 w-full bg-transparent border-b-2 border-slate-300 !text-black">
+                        <input type="text" placeholder="Masukkan Nama" class="border-none text-right font-black text-base p-0 uppercase focus:ring-0 w-full bg-transparent border-b-2 border-slate-300 !text-black">
+                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-2">Ketua Panitia / Pengerusi PLC</p>
                     </div>
                 </div>
             </section>
@@ -317,7 +307,6 @@
         const apiKey = ""; 
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Setup Listeners
             const genBtn = document.getElementById('generateAI');
             if (genBtn) genBtn.addEventListener('click', generateAISystem);
             
@@ -326,14 +315,13 @@
                 printBtn.addEventListener('click', (e) => {
                     e.preventDefault();
                     window.focus();
-                    setTimeout(() => { window.print(); }, 100);
+                    setTimeout(() => { window.print(); }, 150);
                 });
             }
 
             const addRowBtn = document.getElementById('addRowBtn');
             if (addRowBtn) addRowBtn.addEventListener('click', addTeacherRow);
 
-            // Setup Upload Buttons
             document.getElementById('upBtn1').addEventListener('click', () => document.getElementById('uploadFasa1').click());
             document.getElementById('upBtn2').addEventListener('click', () => document.getElementById('uploadFasa2').click());
             document.getElementById('upBtn3').addEventListener('click', () => document.getElementById('uploadFasa3').click());
@@ -371,12 +359,27 @@
             }
         }
 
+        async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) return response;
+                    const errorText = await response.text();
+                    console.error(`Attempt ${i+1} failed:`, errorText);
+                } catch (err) {
+                    console.error(`Attempt ${i+1} Network Error:`, err);
+                }
+                if (i < retries - 1) await new Promise(r => setTimeout(r, backoff * Math.pow(2, i)));
+            }
+            throw new Error('Gagal menghubungi pelayan AI setelah beberapa percubaan. Sila periksa sambungan internet anda.');
+        }
+
         async function callGemini(prompt, isStrategic = false) {
             const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
             
             const systemPrompt = isStrategic 
-                ? "Bina satu 'Kesimpulan Cadangan Penyelesaian Terbaik'. PENTING: JANGAN gunakan sebarang ayat pengenalan atau penutup. Mulakan terus dengan ayat 'Kesimpulan Cadangan Penyelesaian: [isi kandungan]'. Jangan gunakan simbol **. Rumusan mestilah berdasarkan tajuk isu dan maklum balas guru yang diberikan."
-                : "Rumuskan butiran untuk 10 aspek kritikan video berdasarkan maklum balas guru. Jika tiada maklumat, tulis 'Tidak berkaitan'. Berikan JSON: { 'aspect1': 'ulasan', ... }.";
+                ? "Bina satu 'Kesimpulan Cadangan Penyelesaian Terbaik' berdasarkan SKPMg2 Standard 4. PENTING: JANGAN gunakan ayat pengenalan atau penutup. Mulakan terus dengan ayat 'Kesimpulan Cadangan Penyelesaian: [isi kandungan]'. JANGAN gunakan sebarang format markdown seperti simbol **. Pastikan bahasa profesional."
+                : "Rumuskan butiran untuk 8 kriteria SKPMg2 Standard 4 berdasarkan maklum balas guru. Berikan maklum balas dalam format JSON SAHAJA. JANGAN beri teks huraian luar JSON. Format: { \"aspect1\": \"ulasan\", \"aspect2\": \"ulasan\", ... }.";
 
             const payload = {
                 contents: [{ parts: [{ text: prompt }] }],
@@ -384,34 +387,51 @@
                 generationConfig: !isStrategic ? { responseMimeType: "application/json" } : {}
             };
 
-            const response = await fetch(url, {
+            const response = await fetchWithRetry(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
 
-            if (!response.ok) throw new Error('API Error');
             const result = await response.json();
-            return result.candidates[0].content.parts[0].text;
+            const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (!text) throw new Error("Tiada respons daripada AI.");
+            return text;
+        }
+
+        function extractJsonSafely(rawText) {
+            try {
+                // Try direct parse
+                return JSON.parse(rawText);
+            } catch (e) {
+                // Try finding {}
+                const start = rawText.indexOf('{');
+                const end = rawText.lastIndexOf('}');
+                if (start !== -1 && end !== -1) {
+                    const cleaned = rawText.substring(start, end + 1);
+                    return JSON.parse(cleaned);
+                }
+                throw new Error("Format data AI tidak sah.");
+            }
         }
 
         async function generateAISystem() {
             const btn = document.getElementById('generateAI');
-            const btnText = btn.querySelector('span') || btn;
             const btnLoading = document.getElementById('btnLoading');
             const summaryBox = document.getElementById('aiStrategicSummary');
-            const pdpTitle = document.getElementById('pdpTitle').value;
+            const pdpTitle = document.getElementById('pdpTitle').value || "Sesi PdPc";
 
-            const teacherInputs = Array.from(document.querySelectorAll('#teacherTable tbody tr'))
-                .map(row => {
+            const teacherRows = Array.from(document.querySelectorAll('#teacherTable tbody tr'));
+            const teacherInputs = teacherRows.map(row => {
                     const name = row.querySelector('.t-name').value;
                     const strength = row.querySelector('.t-strength').value;
                     const improve = row.querySelector('.t-improve').value;
-                    return `Guru ${name}: [Kekuatan: ${strength}] | [Cadangan: ${improve}]`;
-                }).join('\n');
+                    if (!name && !strength && !improve) return null;
+                    return `Guru ${name || 'Tanpa Nama'}: [Kekuatan: ${strength || 'N/A'}] | [Cadangan: ${improve || 'N/A'}]`;
+                }).filter(Boolean).join('\n');
 
-            if (!teacherInputs.trim() || teacherInputs.length < 10) {
-                alert('Sila isi maklum balas guru secukupnya.');
+            if (!teacherInputs || teacherInputs.length < 10) {
+                alert('Sila isi maklum balas kekuatan & penambahbaikan guru terlebih dahulu.');
                 return;
             }
 
@@ -419,27 +439,30 @@
             btnLoading.classList.remove('hidden');
 
             try {
-                const aspectsJson = await callGemini(`Input guru bertajuk ${pdpTitle}:\n${teacherInputs}`, false);
-                const data = JSON.parse(aspectsJson);
+                // Fasa 2: 8 Aspek
+                const aspectsRaw = await callGemini(`Analisis input pemerhatian guru untuk PdPc bertajuk ${pdpTitle}:\n${teacherInputs}`, false);
+                const data = extractJsonSafely(aspectsRaw);
                 
-                const keys = Object.keys(data);
-                for(let i=1; i<=10; i++) {
+                // Populate fields
+                for(let i=1; i<=8; i++) {
                     const el = document.getElementById(`crit-${i}`);
                     if(el) {
-                        el.value = data[`aspect${i}`] || data[`crit-${i}`] || data[keys[i-1]] || "Tidak berkaitan";
+                        el.value = data[`aspect${i}`] || data[`aspect_${i}`] || "Tiada ulasan berkaitan dikesan.";
                     }
                 }
 
-                const strategicPrompt = `Tajuk: ${pdpTitle}\nInput:\n${teacherInputs}\nAnalisis:\n${Object.values(data).join('\n')}`;
+                // Langkah 2: Jana Kesimpulan
+                const strategicPrompt = `Berdasarkan analisis Standard 4 berikut:\n${Object.values(data).join('\n')}\nJana rumusan kesimpulan strategi terbaik untuk tajuk ${pdpTitle}.`;
                 const strategicResult = await callGemini(strategicPrompt, true);
-                summaryBox.value = strategicResult;
+                summaryBox.value = strategicResult.trim();
 
-                document.getElementById('bestPractice').value = "Penerapan elemen instruksional berfokus berdasarkan maklum balas kritikan video.";
-                document.getElementById('shareMedium').value = "WhatsApp Panitia, Fail PLC Sekolah.";
+                // Fasa 3: Defaults
+                document.getElementById('bestPractice').value = "Penerapan elemen Standard 4 PdPc secara berfokus berdasarkan kekuatan yang dikesan.";
+                document.getElementById('shareMedium').value = "WhatsApp Panitia, Taklimat Dalaman & Perkongsian Bank Data.";
 
             } catch (err) {
-                console.error(err);
-                alert('Ralat penjanaan. Sila cuba lagi.');
+                console.error("Ralat Penjanaan:", err);
+                alert('Ralat sistem penjanaan: ' + err.message + '\nSila pastikan data diisi dan cuba lagi.');
             } finally {
                 btn.disabled = false;
                 btnLoading.classList.add('hidden');
